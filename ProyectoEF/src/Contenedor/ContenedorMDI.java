@@ -5,6 +5,9 @@
  */
 package Contenedor;
 
+import Mantenimientos.AsignacionAlumnos;
+import Mantenimientos.AsignacionMaestros;
+
 /**
  *
  * @author lsosa
@@ -64,9 +67,19 @@ public class ContenedorMDI extends javax.swing.JFrame {
         jMenu2.setText("Catalogos");
 
         jMenuItem1.setText("Asignacion Alumnos");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem1);
 
         jMenuItem2.setText("Asignacion Maestros");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
@@ -139,6 +152,21 @@ public class ContenedorMDI extends javax.swing.JFrame {
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        
+       AsignacionAlumnos aa = new AsignacionAlumnos();
+         aa.setVisible(true);
+         this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        AsignacionMaestros am = new AsignacionMaestros();
+         am.setVisible(true);
+         this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
